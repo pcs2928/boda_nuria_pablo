@@ -1,95 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuria & Pablo</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
       background-color: #f8f5f0;
       color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 0;
     }
-
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
     header {
-      padding: 50px 20px 20px;
+      background-color: #f2e9da;
+      padding: 40px 20px;
+      position: relative;
     }
-
     h1 {
       font-size: 3em;
-      margin: 0;
       color: #a18863;
+      margin: 0.2em 0;
     }
-
-    .date {
-      font-size: 1.5em;
-      margin-bottom: 40px;
+    .subtitle {
+      font-size: 1.2em;
       color: #7b6e52;
     }
-
-    .section {
-      max-width: 600px;
-      margin-bottom: 50px;
+    .social-icons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
-
-    .section-title {
+    .social-icons a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #7b6e52;
       font-size: 1.5em;
+    }
+    .countdown {
+      font-size: 2em;
+      margin-top: 20px;
       color: #a18863;
-      margin-bottom: 10px;
     }
-
-    .section-content {
-      font-size: 1.1em;
-      color: #555;
-    }
-
     footer {
-      margin-top: auto;
+      background-color: #f2e9da;
       padding: 20px;
       font-size: 0.9em;
-      color: #aaa;
-    }
-
-    .coming-soon {
-      margin-top: 20px;
-      font-style: italic;
-      color: #999;
+      color: #555;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Nuria & Pablo</h1>
-    <div class="date">20 de junio de 2026</div>
+    <div class="subtitle">20 de junio de 2026</div>
+    <div class="subtitle">Nos casamos</div>
+    <div class="social-icons">
+      <a href="#" target="_blank">📸</a>
+      <a href="#" target="_blank">📸</a>
+    </div>
   </header>
 
-  <section class="section">
-    <div class="section-title">¡Nos casamos!</div>
-    <div class="section-content">
-      La ceremonia tendrá lugar en la <strong>Parroquia Santa Bárbara</strong> a las <strong>18:30</strong>.
-      <br /><br />
-      Nos encantaría contar con tu presencia en este día tan especial.
-    </div>
+  <section data-aos="fade-up">
+    <h2>¡Queremos compartir este día con vosotros!</h2>
+    <p>Nos hace mucha ilusión anunciar que nos casamos y queremos que nos acompañéis en este día tan especial para nosotros.</p>
   </section>
 
-  <section class="section">
-    <div class="section-title">Confirmación de asistencia</div>
-    <div class="section-content">
-      Próximamente podrás confirmar tu asistencia desde esta misma página.
-      <div class="coming-soon">(Formulario disponible en breve)</div>
-    </div>
+  <section data-aos="fade-up">
+    <h2>Lugares</h2>
+    <p>[Aquí irá una imagen del lugar]</p>
+    <p><a href="#" target="_blank">Dirección de la iglesia / finca (Google Maps)</a></p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Horario del día</h2>
+    <p>[Aquí irá una imagen con el programa de la boda]</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Cuenta atrás</h2>
+    <div class="countdown" id="countdown"></div>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Nuestra historia</h2>
+    <p>[Aquí contaréis vuestra historia de amor]</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Confirmación de asistencia</h2>
+    <p>[Aquí irá el formulario de RSVP]</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Regalo</h2>
+    <p>[Aquí se mostrará el número de cuenta y un texto bonito]</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Álbum de boda</h2>
+    <p><a href="#" target="_blank">Haz clic aquí para ver o subir fotos</a></p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>¡Gracias!</h2>
+    <p>Gracias por acompañarnos en este día tan especial. Para cualquier duda, no dudéis en llamarnos.</p>
+    <p>Nuria: [número]<br>Pablo: [número]</p>
   </section>
 
   <footer>
-    Hecho con cariño por Nuria & Pablo
+    Hecho con amor por Nuria & Pablo ❤️
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const countdown = document.getElementById("countdown");
+    const weddingDate = new Date("2026-06-20T18:30:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
