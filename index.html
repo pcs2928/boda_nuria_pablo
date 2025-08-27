@@ -1,76 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nuria & Pablo</title>
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
-<style>
-body {
-margin: 0;
-font-family: 'Playfair Display', serif;
-background-color: #f8f5f0;
-color: #333;
-text-align: center;
-padding: 0;
-}
-header {
-background-color: #d6d6d6;
-height: 66vh;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-padding: 40px;
-position: relative;
-flex-wrap: wrap;
-}
-.header-left {
-text-align: left;
-flex: 1;
-}
-.header-left h2 {
-margin: 0;
-font-family: 'Playfair Display', serif;
-font-size: 2.5em;
-color: #6a1b9a;
-font-weight: bold;
-}
-.header-left p {
-margin: 5px 0;
-font-size: 1.3em;
-color: #6a1b9a;
-font-weight: bold;
-}
-.header-right {
-flex: 1;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.header-right img {
-width: 100%;
-max-width: 300px;
-border-radius: 50%;
-box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.7);
-filter: blur(0.5px);
-}
-.header-top {
-position: absolute;
-top: 10px;
-width: 100%;
-text-align: center;
-font-size: 3em;
-font-family: 'Great Vibes', cursive;
-color: #6a1b9a;
-font-weight: bold;
-}
-.social-icons {
-position: absolute;
-top: 20px;
-right: 20px;
-</header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuria & Pablo</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #f8f5f0;
+      color: #333;
+      text-align: center;
+      padding: 0;
+    }
+    header {
+      background-color: #d6d6d6;
+      height: 66vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    .header-left {
+      text-align: left;
+      flex: 1;
+    }
+    .header-left h2 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: #6a1b9a;
+      font-weight: bold;
+    }
+    .header-left p {
+      margin: 5px 0;
+      font-size: 1.3em;
+      color: #6a1b9a;
+      font-weight: bold;
+    }
+    .header-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header-right img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 50%;
+      box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.7);
+      filter: blur(0.5px);
+    }
+    .header-top {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 3em;
+      font-family: 'Great Vibes', cursive;
+      color: #6a1b9a;
+      font-weight: bold;
+    }
+    .social-icons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .social-icons a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #6a1b9a;
+      font-size: 1.5em;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .countdown {
+      font-size: 2em;
+      margin-top: 20px;
+      color: #a18863;
+    }
+    footer {
+      background-color: #f2e9da;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-top">Nuria & Pablo</div>
+  <header>
+    <div class="header-left">
+      <h2>¡Nos casamos!</h2>
+      <p>20 de junio de 2026</p>
+    </div>
+    <div class="header-right">
+      <img src="encabezado.jpeg" alt="Nuria y Pablo">
+    </div>
+    <div class="social-icons">
+      <a href="#" target="_blank">📸</a>
+      <a href="#" target="_blank">📸</a>
+    </div>
+  </header>
 
   <section data-aos="fade-up">
     <h2>¡Queremos compartir este día con vosotros!</h2>
@@ -105,7 +144,8 @@ right: 20px;
 
   <section data-aos="fade-up">
     <h2>Regalo</h2>
-    <p>[Aquí se mostrará el número de cuenta y un texto bonito]</p>
+    <p>Nuestro mejor regalo es vuestra compañía y que seáis partícipes de un día tan especial para nosotros.</p>
+    <p>Para poder contribuir en el inicio de esta nueva etapa que comenzamos, podéis hacernos entrega en efectivo o en el número de cuenta ... para darnos un empujoncito.</p>
   </section>
 
   <section data-aos="fade-up">
@@ -147,3 +187,4 @@ right: 20px;
   </script>
 </body>
 </html>
+
