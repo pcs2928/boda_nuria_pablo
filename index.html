@@ -1,190 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuria & Pablo</title>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laura & Camilo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #f8f5f0;
-      color: #333;
-      text-align: center;
-      padding: 0;
+      font-family: 'Patrick Hand', cursive;
+      background: url('/mnt/data/fondo-1.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+      overflow-x: hidden;
     }
-    header {
-      background-color: #d6d6d6;
-      height: 66vh;
+
+    .section {
+      padding: 80px 20px;
       display: flex;
       flex-direction: row;
-      align-items: center;
       justify-content: space-between;
-      padding: 40px;
-      position: relative;
-      flex-wrap: wrap;
-    }
-    .header-left {
-      text-align: left;
-      flex: 1;
-    }
-    .header-left h2 {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      color: #6a1b9a;
-      font-weight: bold;
-    }
-    .header-left p {
-      margin: 5px 0;
-      font-size: 1.3em;
-      color: #6a1b9a;
-      font-weight: bold;
-    }
-    .header-right {
-      flex: 1;
-      display: flex;
-      justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      text-align: left;
     }
-    .header-right img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 50%;
-      box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.7);
-      filter: blur(0.5px);
-    }
-    .header-top {
-      position: absolute;
-      top: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 3em;
-      font-family: 'Great Vibes', cursive;
-      color: #6a1b9a;
-      font-weight: bold;
-    }
-    .social-icons {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    .social-icons a {
-      margin-left: 10px;
-      text-decoration: none;
-      color: #6a1b9a;
-      font-size: 1.5em;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .countdown {
-      font-size: 2em;
-      margin-top: 20px;
-      color: #a18863;
-    }
-    footer {
-      background-color: #f2e9da;
+
+    .section .text {
+      flex: 1 1 300px;
       padding: 20px;
-      font-size: 0.9em;
-      color: #555;
+    }
+
+    .section .image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="header-top">Nuria & Pablo</div>
-  <header>
-    <div class="header-left">
-      <h2>¡Nos casamos!</h2>
-      <p>20 de junio de 2026</p>
+  <section class="section">
+    <div class="text">
+      <p>Queremos compartir contigo el día<br>más feliz de nuestras vidas</p>
+      <h1>NURIA & PABLO</h1>
     </div>
-    <div class="header-right">
-      <img src="encabezado.jpeg" alt="Nuria y Pablo">
+    <div class="image">
+      <img src="/mnt/data/encabezado.jpeg" alt="Pablo y Nuria" class="hero-img">
     </div>
-    <div class="social-icons">
-      <a href="#" target="_blank">📸</a>
-      <a href="#" target="_blank">📸</a>
-    </div>
-  </header>
-
-  <section data-aos="fade-up">
-    <h2>¡Queremos compartir este día con vosotros!</h2>
-    <p>Nos hace mucha ilusión anunciar que nos casamos y queremos que nos acompañéis en este día tan especial para nosotros.</p>
   </section>
-
-  <section data-aos="fade-up">
-    <h2>Lugares</h2>
-    <p>[Aquí irá una imagen del lugar]</p>
-    <p><a href="#" target="_blank">Dirección de la iglesia / finca (Google Maps)</a></p>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Horario del día</h2>
-    <p>[Aquí irá una imagen con el programa de la boda]</p>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Cuenta atrás</h2>
-    <div class="countdown" id="countdown"></div>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Nuestra historia</h2>
-    <p>[Aquí contaréis vuestra historia de amor]</p>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Confirmación de asistencia</h2>
-    <p>[Aquí irá el formulario de RSVP]</p>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Regalo</h2>
-    <p>Nuestro mejor regalo es vuestra compañía y que seáis partícipes de un día tan especial para nosotros.</p>
-    <p>Para poder contribuir en el inicio de esta nueva etapa que comenzamos, podéis hacernos entrega en efectivo o en el número de cuenta ... para darnos un empujoncito.</p>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Álbum de boda</h2>
-    <p><a href="#" target="_blank">Haz clic aquí para ver o subir fotos</a></p>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>¡Gracias!</h2>
-    <p>Gracias por acompañarnos en este día tan especial. Para cualquier duda, no dudéis en llamarnos.</p>
-    <p>Nuria: [número]<br>Pablo: [número]</p>
-  </section>
-
-  <footer>
-    Hecho con amor por Nuria & Pablo ❤️
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    const countdown = document.getElementById("countdown");
-    const weddingDate = new Date("2026-06-20T18:30:00").getTime();
-
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    };
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
 </body>
 </html>
 
